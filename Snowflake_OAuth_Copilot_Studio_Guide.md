@@ -106,6 +106,7 @@ CREATE SECURITY INTEGRATION <integration_name>  -- e.g., POWER_PLATFORM_OAUTH
 
 ## Troubleshooting Tips
 - Ensure case sensitivity in Snowflake details.
+- Ensure you actually grant the ANALYST role access to the warehouse, database, schema, and tables!
 - If using Cortex Agents (Snowflake's AI), integrate via agent-to-agent calls in Copilot Studio topics.
 - For errors, check Entra ID audit logs or Snowflake query history.
 - Data stays in Snowflake; no export occurs.
