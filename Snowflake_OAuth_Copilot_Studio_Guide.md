@@ -3,7 +3,7 @@
 This guide outlines the steps to integrate Snowflake as a knowledge source in Microsoft Copilot Studio using OAuth authentication via Microsoft Entra ID. This enables your custom agents (copilots) to query Snowflake data in real-time using natural language, without writing SQL.
 
 ## Prerequisites
-- Snowflake account with appropriate roles (e.g., ACCOUNTADMIN for setup).
+- Snowflake account with appropriate roles (e.g., ACCOUNTADMIN for setup). Trial is acceptable and if a trial is needed see [Snowflake Trial](https://signup.snowflake.com/)
 - Microsoft Entra ID tenant.
 - Premium Power Platform license (required for Snowflake connector).
 - Access to Microsoft Copilot Studio (part of Microsoft Power Platform).
@@ -22,7 +22,7 @@ You need two app registrations: one for the OAuth Resource (Snowflake) and one f
    - Click **Register**.
    - In the app's **Overview**, note the **Application (client) ID** as `<RESOURCE_APP_ID>`.
    - Go to **Expose an API**.
-   - Click **Set** next to **Application ID URI** and set it to a unique URI (e.g., `api://<your-tenant-id>/<RESOURCE_APP_ID>` or `https://your-domain.com/<RESOURCE_APP_ID>`). Note this as `<SNOWFLAKE_APPLICATION_ID_URI>`.
+   - Click **Set** next to **Application ID URI** and set it to a unique URI (e.g., `api://<RESOURCE_APP_ID>`). Note this as `<SNOWFLAKE_APPLICATION_ID_URI>`.
    - For **Service Principal Auth** (recommended for Copilot Studio, as it uses client credentials flow):
      - Go to **App roles > Create app role**.
      - Set **Allowed member types** to **Applications**.
